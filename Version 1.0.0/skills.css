@@ -1,0 +1,70 @@
+/* 词云容器 */
+.skills-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 50%, #e0e7ff 100%);
+    overflow: hidden;
+}
+
+.word-cloud {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    background: url('cloud-shape.svg') no-repeat center center;
+    background-size: contain;
+}
+
+.word-item {
+    position: absolute;
+    text-align: center;
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: left 0.3s ease, top 0.3s ease;
+}
+
+.word-item span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.word-item .circle {
+    width: var(--circle-size, 80px);
+    height: var(--circle-size, 80px);
+    background-color: rgba(59, 130, 246, 0.2); /* 默认颜色 */
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* 鼠标悬停效果 */
+.word-item:hover span {
+    transform: scale(1.2);
+    color: var(--word-color);
+}
+
+.word-item:hover .circle {
+    transform: translate(-50%, -50%) scale(1.2);
+    background-color: var(--circle-color);
+}
+
+/* 逐个跳出动画 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

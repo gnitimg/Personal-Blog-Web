@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal web</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4797758_nm146ej1hzb.css">
+    
+</head>
+<body>
+  <div id="notification" class="notification">
+    该代码 JS 部分均基于 DeepSeek 提供的算法，且子页面仅完成了 Skills 界面
+  </div>
+  <nav class="nav">
+    <div class="nav-left">
+       <img src="./images/logo.jpg" alt="logo">
+       <p>Gnitimg</p>
+    </div>
+    <div class="nav-right">
+      <ul>
+        <li><i class="iconfont icon-shouye-zhihui"></i><a href="#home">HOME</a></li>
+        <li><i class="iconfont icon-gerenzhongxin-zhihui"></i><a href="#about">ABOUT</a></li>
+        <li><i class="iconfont icon-fenxiang"></i><a href="#works">WORKS</a></li>
+        <li><i class="iconfont icon-bianji"></i><a href="./skills.html">SKILLS</a></li>
+        <li><i class="iconfont icon-xiaoxi-zhihui"></i><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <header id="home" class="hero">
+    <div class="hero-content">
+        <div class="simple">
+            <h1>404 Not Found</h1>
+            <p class="subtitle">Please Click the button below to refresh. </p>
+            <a href="https://ys.mihoyo.com/" class="cta-button">广告位</a>
+        </div>
+    </div>
+</header>
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+              <img src="./images/logo.jpg" alt="logo">
+            </div>
+            <div class="footer-center">
+              <div class="social-links">
+                <a href="https://github.com/gnitimg"><i class="iconfont icon-github"></i>github</a>
+                <a href="https://codeforces.com/  profile/Gnitimg"><i class="iconfont icon-blogger"></i>CodeForces</a>
+                <a href="https://space.bilibili.com/2019222148?spm_id_from=333.1007.0.0"><i class="iconfont icon-vedio"></i>Bilibili</a>
+              </div>
+            </div>
+            <div class="footer-right">
+              <p class="copyright">© 都 2025 年了，连我的代码都想偷？别想不开啊</p>
+            </div>
+    </div>
+    <script>
+      // 5 秒后隐藏提示框
+      setTimeout(() => {
+          const notification = document.getElementById('notification');
+          notification.style.opacity = '0';
+          setTimeout(() => {
+              notification.style.display = 'none';
+          }, 500); // 淡出动画时间
+      }, 1000); // 5 秒后触发
+  </script>
+</body>
+</html>
