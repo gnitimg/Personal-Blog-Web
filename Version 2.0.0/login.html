@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <link rel="stylesheet" href="./templates/auth.css">
+  <link rel="icon" type="image/png" href="./images/icon.png">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/c/font_4797758_nm146ej1hzb.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h2>登录</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" id="username" required>
+          <label>用户名</label>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label>密码</label>
+        </div>
+        <button type="submit">登录</button>
+      </form>
+      <p id="error-message" style="color: red; display: none;">登录失败，请检查用户名和密码。</p>
+    </div>
+  </div>
+  <script src="./scripts/login.js"></script>
+</body>
+</html>
